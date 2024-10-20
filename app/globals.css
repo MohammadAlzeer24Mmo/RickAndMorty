@@ -105,7 +105,11 @@ body {
   opacity: 1;
   bottom: 20px; 
 }
-
+@media (max-width: 700px) {
+  .itemAnimation:hover .titleAnimation {
+    bottom: 10px; 
+  }
+}
 
 
 /* loading characters  */

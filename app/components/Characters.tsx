@@ -53,7 +53,7 @@ const Characters: React.FC = () => {
             className="itemAnimation p-[2px] sm:p-[5px] rounded hover:shadow-lg bg-[rgb(59,130,246,1)]"
           >
             <img className="imageAnimation" src={character.image} alt={character.name} />
-            <h3 className="font-serif text-lg font-bold titleAnimation">
+            <h3 className="font-serif text-[4px] sm:text-[8px] md:text-sm lg:text-lg font-bold titleAnimation">
               {character.name}
             </h3>
           </div>
