@@ -89,7 +89,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
         episodeCharacters.map((character) => (
           <div
             key={character.id}
-            className="itemAnimation p-[5px] rounded hover:shadow-lg bg-[rgb(59,130,246,1)] min-w-[50px] md:max-w-[130px] lg:min-w-[142px]"
+            className="itemAnimation p-[5px] rounded hover:shadow-lg bg-[rgb(59,130,246,1)] min-w-[50px]  lg:min-w-[142px]"
           >
             <img
               className="imageAnimation"
