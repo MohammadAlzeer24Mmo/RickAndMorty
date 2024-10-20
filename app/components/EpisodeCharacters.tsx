@@ -82,7 +82,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
         </p>
       )}
       {/* Rendering Characters for the selected episode */}
-     {props.episodeIdNumber && <div className="fixed font-bold text-blue-400 left-[40%] md:left-[44%]  lg:left-[40%] text-[8px] md:text-xl lg:text-2xl top-[16px]">
+     {props.episodeIdNumber && <div className="absolute font-bold text-blue-400 left-[13%] md:left-[20%]  lg:left-[20%] text-[8px] md:text-xl lg:text-2xl top-[-28px] md:top-[-44px] lg:top-[-47px]">
         ( {episodeName} )
       </div>} 
       {!loadingEpisodeCharacters && props.episodeIdNumber &&
