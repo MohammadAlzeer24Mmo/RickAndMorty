@@ -14,7 +14,7 @@ const Main: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex min-h-screen">
       <Episodes onSelectEpisodeID={selectEpisodeIDHandler} />
       <CharactersWrapper>
         {!episodeIdNumber && <Characters />}

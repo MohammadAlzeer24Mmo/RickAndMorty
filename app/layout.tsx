@@ -28,8 +28,8 @@ export default function RootLayout({
           <head>
         <link rel="icon" href="rickandmorty.jpeg" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body className="min-h-screen"
+        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

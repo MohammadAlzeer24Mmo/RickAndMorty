@@ -72,7 +72,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
       {/* Display loading spinner */}
       {loadingEpisodeCharacters && (
         <div>
-          <Loading text="Loading episodes characters..." />
+          <Loading text="Loading episode characters..." />
         </div>
       )}
       {/* Display error message if exists */}
@@ -96,7 +96,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
               src={character.image}
               alt={character.name}
             />
-            <h3 className="mt-1 text-[6px] font-bold text-blue-200 md:text-sm lg:text-base font-style">
+            <h3 className="mt-[0.5rem] text-[6px] font-bold text-blue-200 md:text-sm lg:text-sm font-style">
               {character.name}
             </h3>
           </div>

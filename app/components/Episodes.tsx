@@ -54,7 +54,7 @@ const Episodes: React.FC<EpisodesProps> = (props) => {
         </p>
       )}
       {!LoadingEpisodes && (
-        <ul className="space-y-2 border-2 border-blue-500 rounded-sm h-[550px] overflow-y-auto overflow-x-hidden custom-scrollbar">
+        <ul className="space-y-2 border-2 border-blue-500 rounded-sm h-[550px] max-h-[350px]  md:max-h-[550px]  overflow-y-auto overflow-x-hidden custom-scrollbar">
           {episodes.map((episode) => (
             <li key={episode.id}>
               <a

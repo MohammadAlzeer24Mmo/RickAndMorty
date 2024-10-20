@@ -16,6 +16,11 @@
   }
 }
 
+html, body {
+  height: auto; /* Ensure height is auto */
+  overflow: auto; /* Allow scrolling if content overflows */
+}
+
 body {
   color: var(--foreground);
   /* background: var(--background); */
