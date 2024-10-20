@@ -43,9 +43,8 @@ const Episodes: React.FC<EpisodesProps> = (props) => {
       props.onSelectEpisodeID(episodeID!); // Ensure episodeID is defined
     }
   }, [episodeID, props]);
-
   return (
-    <nav className="w-[25%] bg-black-100 p-4 text-blue-400 h-[550px] max-h-[550px] ">
+    <nav className="w-[25%] bg-black-100 p-4 text-blue-400 h-[550px] max  ">
       <h2 className="mb-4 text-[8px] sm:text-lg md:text-xl lg:text-2xl font-bold text-center">Episodes</h2>
       {LoadingEpisodes && <Loading text="Loading episodes..." />}
       {error && (
@@ -54,7 +53,7 @@ const Episodes: React.FC<EpisodesProps> = (props) => {
         </p>
       )}
       {!LoadingEpisodes && (
-        <ul className="space-y-2 border-2 p-2 border-[rgb(59,130,246)] rounded-sm h-[550px] max-h-[350px]  md:max-h-[550px]  overflow-y-auto overflow-x-hidden custom-scrollbar">
+        <ul className="space-y-2 border-2 p-2 border-[rgb(59,130,246)] rounded-sm h-[550px] max-h-[350px] lg:max-h-[790px]   md:max-h-[550px] lg:h-[790px]  overflow-y-auto overflow-x-hidden custom-scrollbar">
           {episodes.map((episode) => (
             <li key={episode.id}>
               <a
