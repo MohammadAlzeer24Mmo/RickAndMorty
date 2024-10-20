@@ -63,7 +63,7 @@ const Characters: React.FC = () => {
             </h3>
           </div>
         ))}
-       {showPagination && <Pagination/>}
+       {!loadingCharacters && showPagination && <Pagination/>}
     </>
   );
 };
