@@ -44,7 +44,7 @@ const Episodes: React.FC<EpisodesProps> = (props) => {
     }
   }, [episodeID, props]);
   return (
-    <nav className="w-[25%] bg-black-100 p-4 text-blue-400 h-[550px] max  ">
+    <nav className="w-[25%] bg-black-100 p-4 text-blue-400 h-[550px]">
       <h2 className="mb-4 text-[8px] sm:text-lg md:text-xl lg:text-2xl font-bold text-center">Episodes</h2>
       {LoadingEpisodes && <Loading text="Loading episodes..." />}
       {error && (
