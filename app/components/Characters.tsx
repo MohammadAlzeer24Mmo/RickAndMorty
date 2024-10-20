@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
+import Pagination from "./Pagination";
 
 interface Character {
   id: number;
@@ -13,6 +14,7 @@ const Characters: React.FC = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
   const [loadingCharacters, setLoadingCharacters] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const [showPagination, setShowPagination] = useState<boolean>(false);
 
   {/* Fetching characters */}
   useEffect(() => {
@@ -30,11 +32,13 @@ const Characters: React.FC = () => {
         setError(err.message);
       } finally {
         setLoadingCharacters(false);
+        setShowPagination(true)
       }
      console.log(loadingCharacters,"ddd")
     };
     fetchCharacters();
   }, []);
+
 
   return (
     <>
@@ -59,6 +63,7 @@ const Characters: React.FC = () => {
             </h3>
           </div>
         ))}
+       {showPagination && <Pagination/>}
     </>
   );
 };

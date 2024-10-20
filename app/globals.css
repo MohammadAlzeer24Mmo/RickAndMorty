@@ -156,3 +156,30 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: #357ab8; 
 }
+
+
+/* pagination */
+@keyframes fadeIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.pagination-arrow {
+  @apply bg-blue-500 text-white py-2 px-3 rounded-full transition duration-300 ease-in-out hover:bg-blue-700;
+  animation: fadeIn 0.5s ease;
+}
+
+.pagination-btn {
+  @apply bg-white border-2 border-blue-500 text-blue-500 h-10 w-10 flex items-center justify-center transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white;
+  animation: fadeIn 0.5s ease;
+}
+
+.pagination-btn:hover {
+  @apply bg-blue-500 text-white;
+}

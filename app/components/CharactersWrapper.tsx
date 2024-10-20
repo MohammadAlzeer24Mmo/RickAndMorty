@@ -8,7 +8,7 @@ interface CharactersWrapperProps {
 const CharactersWrapper: React.FC<CharactersWrapperProps> = (props) => {
   return (
     <>
-      <main className="w-[75%] p-4 min-h-screen mb-12 ">
+      <main className="w-[75%] relative p-4 min-h-screen mb-12 ">
         <h2 className="mb-4 text-[8px] font-bold text-blue-400 md:text-xl lg:text-2xl">
           Characters
         </h2>
