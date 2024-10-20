@@ -11,7 +11,7 @@ interface Character {
 
 const Characters: React.FC = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
-  const [loadingCharacters, setLoadingCharacters] = useState<boolean>(true);
+  const [loadingCharacters, setLoadingCharacters] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
   {/* Fetching characters */}
