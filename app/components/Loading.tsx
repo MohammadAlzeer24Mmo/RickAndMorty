@@ -7,7 +7,8 @@ interface LoadingProps {
 
 const Loading: React.FC<LoadingProps> = (props) => {
   const loadingPosition =
-    props.text === "Loading characters..."
+    props.text === "Loading characters..." ||
+    props.text === "Loading episodes characters..."
       ? "absolute w-[75%]"
       : "w-auto";
 

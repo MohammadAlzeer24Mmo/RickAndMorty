@@ -15,7 +15,7 @@ interface EpisodeCharactersProps {
 
 const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
   const [episodeCharacters, setEpisodeCharacters] = useState<Character[]>([]);
-  const [loadingEpisodeCharacters, setLoadingEpisodeCharacters] = useState<boolean>(true);
+  const [loadingEpisodeCharacters, setLoadingEpisodeCharacters] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [episodeName, setEpisodeName] = useState<string | null>(null);
 
@@ -72,7 +72,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
       {/* Display loading spinner */}
       {loadingEpisodeCharacters && (
         <div>
-          <Loading text="Loading characters..." />
+          <Loading text="Loading episodes characters..." />
         </div>
       )}
       {/* Display error message if exists */}

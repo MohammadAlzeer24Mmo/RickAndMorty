@@ -16,6 +16,7 @@ const Characters: React.FC = () => {
 
   {/* Fetching characters */}
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const fetchCharacters = async () => {
       setError(null);
       setLoadingCharacters(true);
@@ -31,8 +32,10 @@ const Characters: React.FC = () => {
       } finally {
         setLoadingCharacters(false);
       }
+     console.log(loadingCharacters,"ddd")
     };
     fetchCharacters();
+  }
   }, []);
 
   return (
