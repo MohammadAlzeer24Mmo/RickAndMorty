@@ -72,7 +72,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
       {/* Display loading spinner */}
       {loadingEpisodeCharacters && (
         <div>
-          <Loading text="Loading episode characters..." />
+          <Loading text="Loading characters..." />
         </div>
       )}
       {/* Display error message if exists */}
@@ -83,7 +83,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
       )}
       {/* Rendering Characters for the selected episode */}
      {props.episodeIdNumber && <div className="absolute font-bold text-blue-400 left-[42.5%] lg:left-[42%] text-[8px] md:text-xl lg:text-2xl top-4">
-        ( {episodeName} )
+        ( {episodeName}  episode )
       </div>} 
       {!loadingEpisodeCharacters && props.episodeIdNumber &&
         episodeCharacters.map((character) => (
