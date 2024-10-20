@@ -54,7 +54,7 @@ const Episodes: React.FC<EpisodesProps> = (props) => {
         </p>
       )}
       {!LoadingEpisodes && (
-        <ul className="space-y-2 border-2 border-blue-500 rounded-sm h-[550px] max-h-[350px]  md:max-h-[550px]  overflow-y-auto overflow-x-hidden custom-scrollbar">
+        <ul className="space-y-2 border-2 p-2 border-[rgb(59,130,246)] rounded-sm h-[550px] max-h-[350px]  md:max-h-[550px]  overflow-y-auto overflow-x-hidden custom-scrollbar">
           {episodes.map((episode) => (
             <li key={episode.id}>
               <a
@@ -66,7 +66,7 @@ const Episodes: React.FC<EpisodesProps> = (props) => {
                 href="#"
                 className={`font-style text-center transform transition-all duration-300 ${
                   episodeID === episode.id ? "bg-blue-700 scale-105 shadow-lg" : ""
-                } block p-2 rounded hover:bg-blue-600 hover:scale-105 hover:shadow-lg text-[6px] sm:text-sm lg:text-base`}
+                } block p-3 rounded border-2 border-blue-400 hover:bg-blue-600 hover:scale-105 hover:shadow-lg text-[6px] sm:text-sm lg:text-base`}
               >
                 {episode.name}
               </a>
