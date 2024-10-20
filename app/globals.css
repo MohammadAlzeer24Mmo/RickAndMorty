@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  /* background: var(--background); */
+  background-color: rgb(17, 24, 39);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.itemAnimation {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 10px;
+  transform: translateY(30px); 
+  opacity: 0; 
+  animation: animatee 0.6s ease forwards; 
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+
+@keyframes animatee {
+  from {
+    opacity: 0;
+    transform: scale(0); 
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); 
+  }
+}
+
+
+/* .itemAnimation:nth-child(odd) {
+  animation-delay: 0.1s; 
+}
+
+.itemAnimation:nth-child(even) {
+  animation-delay: 0.2s; 
+} */
+.font-style{
+  font-family: 'Roboto';
+}
+
+.imageAnimation {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.itemAnimation:hover .imageAnimation {
+  transform: scale(1.1) rotate(3deg); 
+  filter: brightness(1.1) contrast(1.2); 
+}
+
+.titleAnimation {
+  position: absolute;
+  bottom: 10px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  opacity: 0;
+  transition: opacity 0.4s ease, bottom 0.4s ease;
+  border-radius: 5px;
+}
+
+.itemAnimation:hover .titleAnimation {
+  opacity: 1;
+  bottom: 20px; 
+}
+
+
+
+/* loading characters  */
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #60a5fa; 
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4a90e2; 
+  border-radius: 6px;
+  border: 2px solid transparent; 
+  background-clip: padding-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #357ab8; 
+}
