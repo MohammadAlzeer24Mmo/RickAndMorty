@@ -14,7 +14,7 @@ const Main: React.FC = () => {
   };
   return (
     <>
-     <h2 className=" mt-4 text-center text-[8px] sm:text-lg font-bold text-blue-400 md:text-xl lg:text-2xl">
+     <h2 className=" mt-4 text-center text-[8px] sm:text-xl font-bold text-blue-400 md:2text-xl">
           Rick and Morty characters
         </h2>
     <div className="flex min-h-screen">

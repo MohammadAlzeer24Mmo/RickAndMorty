@@ -8,7 +8,7 @@ interface CharactersWrapperProps {
 
 
 const CharactersWrapper: React.FC<CharactersWrapperProps> = (props) => {
-  const  changeMargin:string = props.episodeIdNumber === undefined? "mt-6 ":"mt-16"
+  const  changeMargin:string = props.episodeIdNumber === undefined? "mt-6 ":"mt-12 sm:mt-14 md:mt-16 "
 
   return (
     <>
