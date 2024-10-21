@@ -14,7 +14,7 @@ const CharactersWrapper: React.FC<CharactersWrapperProps> = (props) => {
     <>
       <main className={`${changeMargin} w-[75%] p-4 min-h-screen mb-14`}>
        
-        <div className="grid grid-cols-5 relative gap-4  ">
+        <div className="grid grid-cols-5 relative gap-[10px]  ">
           {props.children}
         </div>
       </main>
