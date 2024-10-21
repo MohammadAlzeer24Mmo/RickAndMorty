@@ -15,7 +15,7 @@ const Main: React.FC = () => {
   return (
     <>
      <h2 className=" mt-4 text-center text-[8px] sm:text-xl font-bold text-blue-400 md:2text-xl">
-          Rick and Morty characters
+          Rick and Morty Characters
         </h2>
     <div className="flex min-h-screen">
       <Episodes onSelectEpisodeID={selectEpisodeIDHandler} />
