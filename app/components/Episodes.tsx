@@ -64,8 +64,8 @@ const Episodes: React.FC<EpisodesProps> = (props) => {
                 }}
                 href="#"
                 className={`font-style text-center transform transition-all duration-300 ${
-                  episodeID === episode.id ? "bg-blue-700 scale-105 shadow-lg" : ""
-                } block p-1 md:p-3 rounded border-2 border-blue-400 hover:bg-blue-600 hover:scale-105 hover:shadow-lg text-[6px] sm:text-xs md:text-sm lg:text-base`}
+                  episodeID === episode.id ? "border-2 border-blue-700 scale-105 shadow-lg" : ""
+                } block p-1 md:p-3 rounded border-2 border-blue-400  hover:scale-105 hover:shadow-lg text-[6px] sm:text-xs md:text-sm lg:text-base`}
               >
                 {episode.name}
               </a>
