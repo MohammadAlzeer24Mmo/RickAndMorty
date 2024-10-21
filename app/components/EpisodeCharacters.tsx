@@ -18,6 +18,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
   const [loadingEpisodeCharacters, setLoadingEpisodeCharacters] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [episodeName, setEpisodeName] = useState<string | null>(null);
+  const [charactersLinksList, setCharactersLinksList] = useState<String[]>([]);
 
   useEffect(() => {
     if (props.episodeIdNumber !== undefined) {
@@ -39,7 +40,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
           const data = await res.json();
           const charactersLinks = data.characters;
           setEpisodeName(data.name);
-
+          setCharactersLinksList(charactersLinks)
           // Fetching Characters for the selected episode using Promise.all
           const charactersArray = await Promise.all(
             charactersLinks.map(async (charactersLink: string) => {
@@ -83,7 +84,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
       )}
       {/* Rendering Characters for the selected episode */}
      {props.episodeIdNumber && <div className="absolute font-bold text-blue-400 left-[13%] sm:left-[22%] md:left-[20%]  lg:left-[20%] text-[8px] md:text-xl lg:text-2xl top-[-28px] sm:top-[-35px] md:top-[-44px] lg:top-[-47px]">
-        ( {episodeName} )
+        {`${charactersLinksList.length} characters in episode ${episodeName}`}
       </div>} 
       {!loadingEpisodeCharacters && props.episodeIdNumber &&
         episodeCharacters.map((character) => (
