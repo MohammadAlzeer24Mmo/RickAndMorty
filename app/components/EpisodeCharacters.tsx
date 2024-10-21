@@ -90,14 +90,14 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
         episodeCharacters.map((character) => (
           <div
             key={character.id}
-            className="itemAnimation p-[5px] rounded hover:shadow-lg bg-[rgb(59,130,246,1)] min-w-[50px]  lg:min-w-[142px]"
+            className="itemAnimation p-[5px] rounded hover:shadow-lg min-w-[50px]  lg:min-w-[142px]"
           >
             <img
               className="imageAnimation"
               src={character.image}
               alt={character.name}
             />
-            <h3 className="mt-[0.5rem] text-[6px] font-bold text-blue-200 md:text-sm lg:text-sm font-style">
+            <h3 className="mt-[0.7rem] text-[6px] font-bold text-blue-200 md:text-sm lg:text-sm font-style">
               {character.name}
             </h3>
           </div>
