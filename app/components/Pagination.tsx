@@ -11,7 +11,7 @@ const Pagination: React.FC = () => {
         <ul className="flex space-x-2">
           {[1, 2, 3, 4].map((number) => (
             <li key={number}>
-              <button className="pagination-btn text-sm sm:text-base rounded-full">
+              <button className="pagination-btn text-sm sm:text-base">
                 {number}
               </button>
             </li>
