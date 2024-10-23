@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Loading from "./Loading";
-import Pagination from "./Pagination";
+import Loading from "../Loading";
+import Pagination from "../Pagination";
 import Character from "./Character";
 
 interface Character {
