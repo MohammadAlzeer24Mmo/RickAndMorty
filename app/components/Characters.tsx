@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
 import Pagination from "./Pagination";
+import Character from "./Character";
 
 interface Character {
   id: number;
@@ -53,15 +54,13 @@ const Characters: React.FC = () => {
       {/* Rendering Characters */}
       {!loadingCharacters &&
         characters.map((character) => (
-          <div
-            key={character.id}
-            className="itemAnimation p-[2px] sm:p-[5px] rounded hover:shadow-lg bg-[rgb(59,130,246,1)]"
-          >
-            <img className="imageAnimation" src={character.image} alt={character.name} />
-            <h3 className="font-serif text-[4px] sm:text-[8px] md:text-sm lg:text-base font-bold titleAnimation">
-              {character.name}
-            </h3>
-          </div>
+          <Character
+          key={character.id}
+          id={character.id}
+          name={character.name}
+          image={character.image}
+          EpisodeID={undefined}
+        />
         ))}
        {!loadingCharacters && showPagination && <Pagination/>}
     </>

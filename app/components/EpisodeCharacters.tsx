@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
+import Character from "./Character";
 
 interface Character {
   id: number;
@@ -88,19 +89,13 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
       </div>} 
       {!loadingEpisodeCharacters && props.episodeIdNumber &&
         episodeCharacters.map((character) => (
-          <div
-            key={character.id}
-            className="itemAnimation p-[5px] rounded hover:shadow-lg min-w-[50px]  lg:min-w-[142px]"
-          >
-            <img
-              className="imageAnimation"
-              src={character.image}
-              alt={character.name}
-            />
-            <h3 className="mt-[0.7rem] text-[6px] font-bold text-blue-200 md:text-sm lg:text-sm font-style">
-              {character.name}
-            </h3>
-          </div>
+          <Character
+          key={character.id}
+          id={character.id}
+          name={character.name}
+          image={character.image}
+          EpisodeID={props.episodeIdNumber}
+        />
         ))}
     </>
   );

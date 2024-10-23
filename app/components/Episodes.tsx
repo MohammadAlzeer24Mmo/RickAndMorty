@@ -5,13 +5,18 @@ import { useState, useEffect } from "react";
 import LoadingCharacters from "./Loading";
 import Loading from "./Loading";
 
-// Define the prop types for the Episodes component
+interface Episode {
+  id: number;
+  name: string;
+}
+
+
 interface EpisodesProps {
-  onSelectEpisodeID?: (id: number) => void; // Make it optional
+  onSelectEpisodeID: (id: number) => void; 
 }
 
 const Episodes: React.FC<EpisodesProps> = (props) => {
-  const [episodes, setEpisodes] = useState<any[]>([]);
+  const [episodes, setEpisodes] = useState<Episode[]>([]);
   const [episodeID, setEpisodeID] = useState<number | undefined>(undefined);
   const [LoadingEpisodes, setLoadingEpisodes] = useState(false);
   const [error, setError] = useState<string | null>(null);
