@@ -1,9 +1,9 @@
 "use client"
 import { useState } from "react";
 import Episodes from "./Episodes";
-import Characters from "./characters.jsx/Characters";
-import EpisodeCharacters from "./characters.jsx/EpisodeCharacters";
-import CharactersWrapper from "./characters.jsx/CharactersWrapper";
+import Characters from "./characters/Characters";
+import EpisodeCharacters from "./characters/EpisodeCharacters";
+import CharactersWrapper from "./characters/CharactersWrapper";
 
 const Main: React.FC = () => {
   const [episodeIdNumber, setEpisodeIdNumber] = useState<number | undefined>(undefined);
