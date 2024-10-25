@@ -26,6 +26,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
       const fetchEpisodeCharacters = async () => {
         setEpisodeCharacters([]);
         setLoadingEpisodeCharacters(true);
+        setError(null);
         try {
           // Fetching episode depending on selected episodeIdNumber
           const res = await fetch(
@@ -78,7 +79,7 @@ const EpisodeCharacters: React.FC<EpisodeCharactersProps> = (props) => {
         </div>
       )}
       {/* Display error message if exists */}
-      {error && !loadingEpisodeCharacters && (
+      {error && !loadingEpisodeCharacters && props.episodeIdNumber && (
         <p className="text-red-500 text-center absolute mt-4 w-[75%] m-auto">
           Failed to load episodes: {error}
         </p>

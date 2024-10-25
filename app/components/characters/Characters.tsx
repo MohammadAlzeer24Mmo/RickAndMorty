@@ -32,10 +32,9 @@ const Characters: React.FC = () => {
       } catch (err: any) {
         setError(err.message);
       } finally {
-        setLoadingCharacters(false);
+        setLoadingCharacters(false);  
         setShowPagination(true)
       }
-     console.log(loadingCharacters,"ddd")
     };
     fetchCharacters();
   }, []);
@@ -62,7 +61,7 @@ const Characters: React.FC = () => {
           EpisodeID={undefined}
         />
         ))}
-       {!loadingCharacters && showPagination && <Pagination/>}
+       {!loadingCharacters && !error && showPagination && <Pagination/>}
     </>
   );
 };
